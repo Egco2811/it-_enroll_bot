@@ -7,7 +7,7 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options)
 
 with open("credentials.txt", "r") as file:
-    file.read()
+    username, password = file.readline().split("=")[1], file.readline().split("=")[1]
 
 driver.get("https://kepler-beta.itu.edu.tr")
 driver.find_element(by=By.NAME, value="ctl00$ContentPlaceHolder1$tbUserName").send_keys(username)
