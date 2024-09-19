@@ -10,7 +10,6 @@ with open("credentials.txt", "r") as file:
     lines = file.read().split("\n")
     username, password, crn = lines[0].split("=")[1].strip(), lines[1].split("=")[1].strip(), lines[2].split("=")
     crn = crn[1].split(",")
-    print(crn)
 
 driver.get("https://kepler-beta.itu.edu.tr")
 driver.find_element(by=By.NAME, value="ctl00$ContentPlaceHolder1$tbUserName").send_keys(username)
