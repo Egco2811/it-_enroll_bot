@@ -32,4 +32,4 @@ def enroll(crns):
 
 while True:
     enroll(crn)
-    sleep(0.5)
+    sleep(1)
