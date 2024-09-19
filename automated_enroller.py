@@ -17,7 +17,7 @@ driver.find_element(by=By.NAME, value="ctl00$ContentPlaceHolder1$tbUserName").se
 driver.find_element(by=By.NAME, value="ctl00$ContentPlaceHolder1$tbPassword").send_keys(password)
 driver.find_element(by=By.NAME, value="ctl00$ContentPlaceHolder1$btnLogin").click()
 if driver.current_url == "https://obs.itu.edu.tr/login/SelectIdentity?returnURL=%2Flogin%2FSelectIdentity":
-    driver.find_elements(by=By.CLASS_NAME, value="stretched-link")[1].click()
+    driver.find_elements(by=By.CLASS_NAME, value="stretched-link")[-1].click()
 driver.get("https://obs.itu.edu.tr/ogrenci/DersKayitIslemleri/DersKayit")
 
 
